@@ -8,3 +8,5 @@ Generates a palette for your next colour scheme
  - React Context
  - React-color
  - Chroma-js
+ 
+![](https://github.com/Georgia-B/Palette/blob/master/palette.PNG?raw=true)
