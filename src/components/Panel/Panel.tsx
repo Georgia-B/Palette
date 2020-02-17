@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { AppContext } from '../../utils/contextHelper';
 import { ColourPicker } from '../ColourPicker/ColourPicker';
+import ColourSquare from '../ColourSquare/ColourSquare';
 import './Panel.css';
 
 class Panel extends React.Component {
@@ -26,6 +27,13 @@ class Panel extends React.Component {
                         onChange={this.handleChange}
                         className="hue-picker"
                     />
+                    <div className="palette-container">
+                        {
+                            Object.keys(palette).map((key) => (
+                                <ColourSquare colour={palette[key]} key={key} />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         );
