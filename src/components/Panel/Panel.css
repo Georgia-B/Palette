@@ -1,0 +1,37 @@
+.panel {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 70%;
+    padding: 40px 0;
+}
+
+.palette-container {
+    display: flex;
+    margin: 40px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.label-text {
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+}
+
+.hue-picker {
+    margin: auto;
+}
+
+.pointer {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-10px, -1px);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.37) 0px 1px 4px 0px;
+}

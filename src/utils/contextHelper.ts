@@ -12,7 +12,8 @@ type Context = {
         '300': string,
         '200': string,
         '100': string
-    }
+    },
+    updateBase: (base: string) => void
 }
 
 export const AppContext = React.createContext<Context | undefined>(undefined);

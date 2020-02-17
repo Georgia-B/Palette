@@ -1,29 +1,38 @@
 import * as React from 'react';
 import { AppContext } from './utils/contextHelper';
 import Header from './components/Header/Header';
+import Panel from './components/Panel/Panel';
 
-class App extends React.Component {
-    constructor(props: null) {
-        super(props);
-    }
+class App extends React.Component<null, { base: string, palette: {} }> {
+    state = {
+        base: '#00FFFE',
+        palette: {
+            '900': '#006A6C',
+            '800': '#00999A',
+            '700': '#00B2B2',
+            '600': '#00CBCB',
+            '500': '#00FFFE',
+            '400': '#72FFFF',
+            '300': '#93FFFF',
+            '200': '#B1FFFF',
+            '100': '#EDFFFF',
+        },
+    };
+
+    updateBase = (base: string) => {
+        this.setState({
+            base,
+        });
+    };
 
     render() {
         return (
             <AppContext.Provider value={{
-                base: '#00FFFE',
-                palette: {
-                    '900': '#006A6C',
-                    '800': '#00999A',
-                    '700': '#00B2B2',
-                    '600': '#00CBCB',
-                    '500': '#00FFFE',
-                    '400': '#72FFFF',
-                    '300': '#93FFFF',
-                    '200': '#B1FFFF',
-                    '100': '#EDFFFF',
-                }
+                ...this.state,
+                updateBase: this.updateBase
             }}>
                 <Header />
+                <Panel />
             </ AppContext.Provider>
         );
     }

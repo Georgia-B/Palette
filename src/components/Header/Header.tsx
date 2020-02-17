@@ -6,8 +6,8 @@ const Header = () => {
     return (
         <AppContext.Consumer>
             {
-                ({ palette }) => (
-                    <div className="header" style={{ backgroundColor: palette['200'] }}>
+                ({ palette, base }) => (
+                    <div className="header" style={{ backgroundColor: base }}>
                         <h1 className="title" style={{ color: palette['900'] }}>
                             Palette
                         </h1>
