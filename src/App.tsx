@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { AppContext } from './utils/contextHelper';
+import GetMonochromaticPalette from './utils/colourHelper';
 import Header from './components/Header/Header';
 import Panel from './components/Panel/Panel';
 
@@ -20,8 +21,10 @@ class App extends React.Component<null, { base: string, palette: {} }> {
     };
 
     updateBase = (base: string) => {
+        const palette = GetMonochromaticPalette(base);
         this.setState({
             base,
+            palette
         });
     };
 
